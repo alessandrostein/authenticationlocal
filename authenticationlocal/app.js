@@ -56,5 +56,9 @@ app.use(function(err, req, res, next) {
     });
 });
 
+app.get('/login', function(req, res){
+    res.sendfile('views/login.html');
+});
+
 
 module.exports = app;
