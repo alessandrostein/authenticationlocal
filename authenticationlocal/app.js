@@ -29,6 +29,8 @@ app.use(cookieParser());
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(app.router);
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.get('/', routes.index);
 app.get('/users', users.list);
