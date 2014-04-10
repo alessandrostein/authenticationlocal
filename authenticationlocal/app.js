@@ -91,4 +91,10 @@ passport.deserializeUser(function(user, done) {
   done(null, user);
 });
 
+passport.use(new LocalStrategy(function(username, password, done) {
+  process.nextTick(function() {
+    // Auth Check Logic
+  });
+}));
+
 module.exports = app;
