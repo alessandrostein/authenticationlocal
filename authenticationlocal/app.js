@@ -83,4 +83,12 @@ app.get('/loginSuccess', function(req, res, next) {
   res.send('Successfully authenticated');
 });
 
+passport.serializeUser(function(user, done) {
+  done(null, user);
+});
+
+passport.deserializeUser(function(user, done) {
+  done(null, user);
+});
+
 module.exports = app;
